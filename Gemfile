@@ -6,8 +6,8 @@ ruby '2.6.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3', '~> 1.4'
-gem 'mysql2'
+gem 'sqlite3', '~> 1.4.0'
+#gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -32,6 +32,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.7'
+  gem 'factory_bot_rails', '~> 4.11'
 end
 
 group :development do
@@ -51,5 +53,17 @@ group :test do
   gem 'webdrivers'
 end
 
+# group :production, :staging do
+#   gem 'unicorn'
+# end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'bootstrap'
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+gem 'font-awesome-rails'
+gem "loofah", ">= 2.3.1"
+gem 'faker'
