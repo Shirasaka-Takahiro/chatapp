@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'rooms#index'
+  root to: 'top#show'
 
-  resources :room, only: %i[:show]
+  resources :rooms 
+
+  devise_scope :user do
+    get 'users/sign_out', :to => 'users/sessions#destroy' 
+  end
 
 end

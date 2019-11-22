@@ -1,6 +1,7 @@
 import consumer from "./consumer"
 
-const chatChannel = consumer.subscriptions.create("RoomChannel", {
+$(function() {
+const chatChannel = consumer.subscriptions.create({ channel: 'RoomChannel', room: $('#messages').data('room_id') }, {
   connected() {
     // Called when the subscription is ready for use on the server
   },
@@ -21,9 +22,10 @@ const chatChannel = consumer.subscriptions.create("RoomChannel", {
 });
 
 $(document).on('keypress', '[data-behavior~=room_speaker]', function(event) { 
-  if (event.keyCode === 13) { 
-    chatChannel.speak(event.target.value);
-    event.target.value = '';
-    return event.preventDefault();
-  }
+    if (event.keyCode === 13) { 
+      chatChannel.speak(event.target.value);
+      event.target.value = '';
+      return event.preventDefault();
+    }
+  });
 });

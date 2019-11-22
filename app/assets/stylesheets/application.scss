@@ -1,0 +1,41 @@
+@import "bootstrap";
+
+// Top show 
+
+.main-container {
+
+    position: relative;
+
+    a {
+        font-size: 30px;
+        padding: 1rem;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .bd-container {
+        opacity: 0.5;
+    }
+    
+    .welcome-options {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)
+    }
+
+}
+
+.footer {
+    background-color: black;
+    color: white;
+}
+
+

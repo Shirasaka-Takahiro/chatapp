@@ -1,7 +1,10 @@
-<div>
-  <ul>
-    <% @rooms.each do|room| %>
-      <li><%= link_to "ROOM#{room.id}", room_path(room) %></li>
-    <% end %>
-  </ul>
+<div class="container">
+ <h3>Chatroom一覧</h3>
+  <div>
+    <ul>
+      <% @rooms.each do |room| %>
+        <li><%= link_to "ROOM#{room.id}", room_path(room) %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>
