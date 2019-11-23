@@ -1,5 +1,23 @@
 @import "bootstrap";
 
+// button
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;
+    color: #fff;
+    border-bottom: 4px solid #627295;
+    border-radius: 3px;
+
+    &:active {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+        border-bottom: none;
+    }
+}
+
 // Top show 
 
 .main-container {
