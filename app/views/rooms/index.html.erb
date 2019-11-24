@@ -1,12 +1,14 @@
 <div class="container">
- <h3>Chatroom一覧</h3>
-  <div>
-    <ul>
-      <% @rooms.each do |room| %>
+ <h1><%= link_to "#{current_user.username}さんのページ", user_path(@user) %></h1>
+  <h3>Chatroom一覧</h3>
+   <div>
+     <ul>
+       <% @rooms.each do |room| %>
         <li><%= link_to "ROOM#{room.id}", room_path(room) %></li>
-      <% end %>
-    </ul>
-  </div>
+       <%  end %>
+     </ul>
+   </div>
+  <h3>お気に入り</h3>
   <% if current_user.try(:admin?) %>
     <%= link_to "管理者画面", admin_users_path, class: 'btn' %>
   <% end %>

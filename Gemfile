@@ -68,3 +68,5 @@ gem 'devise-i18n-views'
 gem 'font-awesome-rails'
 gem "loofah", ">= 2.3.1"
 gem 'faker'
+gem 'carrierwave'
+gem 'rmagick'

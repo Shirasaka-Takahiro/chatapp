@@ -5,4 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :messages
+  has_many :rooms
+
+  mount_uploader :image, ImageUploader
+
+  validates :username, presence: true, length: { minimum: 5 }, uniqueness: true
+  validates :email, presence: true, length: { minimum: 6 }, uniqueness: true
 end
