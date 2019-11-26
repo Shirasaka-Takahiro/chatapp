@@ -1,10 +1,32 @@
 @import "bootstrap";
 
+
+// media queli
+$pc: 1024px; // PC
+$tab: 680px; // tablet
+$sp: 480px;  // smartphone
+
+@mixin pc {
+    @media (max-width: ($pc)) {
+      @content;
+    }
+  }
+@mixin tab {
+    @media (max-width: ($tab)) {
+      @content;
+    }
+  }
+@mixin sp {
+    @media (max-width: ($sp)) {
+      @content;
+    }
+}
+
 // button
 
 .btn {
     display: inline-block;
-    padding: 0.5em 1em;
+    padding: 0.5em 0.5em;
     text-decoration: none;
     background: #668ad8;
     color: #fff;
@@ -56,4 +78,33 @@
     color: white;
 }
 
+// users registraion edit
 
+.registration-edit {
+    display: flex;
+
+    @include pc {
+    };
+
+    @include tab {
+        display: inherit;
+        margin-left: -12rem;
+        .image {
+            margin-left: 12rem;
+        }
+    };
+
+    @include sp {
+        display: inherit;
+        margin-left: -12rem;
+        .image {
+            margin-left: 12rem;
+        }
+    };
+
+    .options {
+        padding-left: 12rem;
+    }
+
+
+}

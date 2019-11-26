@@ -24,8 +24,8 @@
           <div class="navbar-nav ml-auto">
             <%= link_to "トップページ", root_path, class: "nav-item nav-link" %>
             <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link" unless user_signed_in? %>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-item nav-link" if user_signed_in? %>
-            <%= link_to "マイページ", rooms_path(current_user), class: "nav-item nav-link" if user_signed_in? %>
+            <%= link_to "ログアウト", destroy_user_session_path, data: { confirm: "本当によろしいですか？" }, method: :delete, class: "nav-item nav-link" if user_signed_in? %>
+            <%= link_to "マイページ", rooms_path(@user), class: "nav-item nav-link" if user_signed_in? %>
           </div>
         </div>
       </nav>

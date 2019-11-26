@@ -1,12 +1,12 @@
 <div class="container">
   <h1><%= "#{current_user.username}さんのプロフィール" %></h1>
   <% if current_user.image? %>
-    <%= image_tag curret_user.image %>
+    <%= image_tag current_user.image.thumb100.url %>
   <% else %>
     <%= image_tag("no-image-icon-23500.jpg") %>
   <% end %>
-  <%= link_to "編集", edit_user_registration_path, class: 'btn' %>
-  <p>名前・・・<%= current_user.username %></p>
-  <p>紹介文・・・<%= current_user.profile %></p>
+  <%= link_to "編集", edit_user_registration_path, class: 'btn p-2 m-2' if current_user %>
+  <p class="p-2">名前・・・<%= current_user.username %></p>
+  <p class="p-2">紹介文・・・<%= current_user.profile %></p>
   # お気に入り
 </div>
