@@ -1,3 +1,9 @@
 <div class='message'>
-  <p><%= "#{message.user.email}: #{message.content}" %></p>
+  <% if message.user.image? %>
+    <%= image_tag message.user.image.thumb30.url, class: 'icon' %>
+  <% else %>
+    <%= image_tag 'no-image-icon-23500.jpg', :size => '30x30', class: 'icon' %>
+  <% end %>
+  <%= "#{message.user.username}:" %>
+  <div class="message-content"><%= "#{message.content}" %></div>
 </div>

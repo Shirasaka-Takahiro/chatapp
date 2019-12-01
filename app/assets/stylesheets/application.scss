@@ -108,3 +108,49 @@ $sp: 480px;  // smartphone
 
 
 }
+
+// room show
+
+.user-intro {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px 0 20px;
+
+    p {
+        padding-right: 15px;
+    }
+
+}  
+
+// message show.html.erb
+
+.chat-room {
+
+    h1 {
+        text-align: center;
+    }
+
+    #messages {
+        padding-left: 25px;
+    }
+
+}
+
+// _message.html.erb
+
+.message {
+    padding: 8px;
+
+    .icon {
+        border-radius: 50%;
+    }
+
+    .message-content {
+        padding: 5px;
+        margin-left: 5px;
+        background-color: #87CEFA;
+        border-radius: 10px;
+        display: inline-block;
+    }
+
+}
