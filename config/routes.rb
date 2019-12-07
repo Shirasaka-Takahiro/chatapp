@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   root to: 'top#show'
 
-  resources :rooms, :only => [:index, :show]
+  resources :rooms
 
   devise_scope :user do
     get 'users/sign_out', :to => 'users/sessions#destroy' 

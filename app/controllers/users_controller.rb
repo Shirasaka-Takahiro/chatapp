@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       if @user.destroy
       redirect_to admin_users_url
-      flash[:notice] = "ユーザー#{@user.username}を削除しました。"    
+      flash[:notice] = "ユーザー#{@user.username}を削除しました。"
       end
     end
 

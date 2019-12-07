@@ -40,7 +40,9 @@ $sp: 480px;  // smartphone
     }
 }
 
-// Top show 
+body {
+    background-color: #FFFFF0;
+}
 
 .main-container {
 
@@ -109,32 +111,55 @@ $sp: 480px;  // smartphone
 
 }
 
-// room show
+// rooms index
 
 .user-intro {
-    display: flex;
-    flex-direction: row;
-    padding: 20px 20px 0 20px;
+    padding: 20px;
+    text-align: center;
 
-    p {
-        padding-right: 15px;
+    span {
+        font-size: 45px;
+        padding: 20px 0 0 10px;
+    }
+
+    .image {
+        border-radius: 50%;
+    }
+
+    .btn {
+        margin-left: 30px;
     }
 
 }  
 
-// message show.html.erb
-
-.chat-room {
-
-    h1 {
-        text-align: center;
+.room-list {
+    span {
+        font-size: 30px;
+        margin-right: 50px;
     }
+}
 
-    #messages {
-        padding-left: 25px;
-    }
+// rooms show
+
+.room-header {
+    text-align: center;
+
+        .btn {
+            margin-left: 85%;
+        }
 
 }
+
+
+    #messages {
+        margin-left: 40px;
+    }
+
+    .send-box {
+        margin-left: 75%;
+        padding: 10px;
+    }
+
 
 // _message.html.erb
 
