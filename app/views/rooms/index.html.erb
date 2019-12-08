@@ -1,7 +1,7 @@
 <div class="container">
   <div class="user-intro">
     <% if current_user.image? %>
-      <%= image_tag current_user.image.thumb80.url, class: 'image' %>
+      <%= image_tag current_user.image.thumb50.url, class: 'image' %>
     <% else %>
       <%= image_tag 'no-image-icon-23500.jpg', :size => '80x80', class:'image' %>
     <% end %>

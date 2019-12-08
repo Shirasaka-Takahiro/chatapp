@@ -41,7 +41,7 @@ $sp: 480px;  // smartphone
 }
 
 body {
-    background-color: #FFFFF0;
+    background-color: white;
 }
 
 .main-container {
@@ -140,25 +140,38 @@ body {
 }
 
 // rooms show
+.chat-room-whole  {
+    background-color: #F8F8FF;
+  .chat-room {
 
-.room-header {
+   .room-header {
     text-align: center;
 
-        .btn {
-            margin-left: 85%;
-        }
+      .btn {
+          margin-left: 60%;
+
+      }
+
+    }
+
+  }
+
+  #messages {
+    margin-left: 50px;
+  }
+
+  .send-box {
+      margin-left: 65%;
+      padding: 10px;
+  }
+
+  input[type="text"] {
+      border: 1px solid black;
+      width: 200px;
+  }
 
 }
 
-
-    #messages {
-        margin-left: 40px;
-    }
-
-    .send-box {
-        margin-left: 75%;
-        padding: 10px;
-    }
 
 
 // _message.html.erb
@@ -176,6 +189,28 @@ body {
         background-color: #87CEFA;
         border-radius: 10px;
         display: inline-block;
+    }
+
+}
+
+// user show.html.erb
+
+h1 {
+    text-align: center;
+}
+
+.show-user {
+    margin: 40px 0 0 20%;
+    display: flex;
+
+    .user-prof {
+        margin: 2% 0 0 5%;
+
+        p {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
     }
 
 }

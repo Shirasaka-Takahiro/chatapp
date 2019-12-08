@@ -5,8 +5,8 @@
   <%= render "devise/shared/error_messages", resource: resource %>
     <div class="registration-edit">
         <div class="image">
-          <% if current_user.image? %>
-            <%= image_tag current_user.image.url %>
+          <% if @user.image? %>
+            <%= image_tag @user.image.thumb300.url, class:'m-3' %>
           <% else %>
             <%= image_tag 'no-image-icon-23500.jpg', :size =>'300x300' %>
           <% end %>

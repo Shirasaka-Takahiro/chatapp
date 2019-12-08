@@ -1,14 +1,18 @@
-<div class="chat-room">
-  <div class="room-header">
-    <h1><%= "Chat Room No.#{@room.id}" %></h1>
-    <%= link_to 'Roomを削除', @room, class: 'btn', method: :delete, data:{confirm:"削除してもよろしいですか？" }%>
+<div class="chat-room-whole container">
+  <div class="chat-room">
+    <div class="room-header">
+      <h1><%= "Chat Room No.#{@room.id}" %></h1>
+      <% if current_user.try(:admin?) %>
+        <%= link_to 'Roomを削除', @room, class: 'btn', method: :delete, data:{confirm:"削除してもよろしいですか？" }%>
+      <% end %>
+    </div>
+    <div id='messages' data-room_id="<%= @room.id %>">
+      <p><%= render partial: 'messages/message', collection: @messages, locals: {user:@user} %></p>
+    </div>
   </div>
-  <div id='messages' data-room_id="<%= @room.id %>">
-    <p><%= render partial: 'messages/message', collection: @messages, locals: {user:@user} %></p>
-  </div>
-</div>
 
-<div class="send-box">
-  <%= text_field_tag :content, nil, data: { behavior: 'room_speaker' } %>
-  <%= label_tag :content, '文字を入力してみよう' %>
+  <div class="send-box">
+    <%= text_field_tag :content, nil, data: { behavior: 'room_speaker' }, placeholder: "文字を入力してみよう" %>
+    <div><%= file_field :image, class: 'btn p-2' %></div>
+  </div>
 </div>
