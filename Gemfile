@@ -71,3 +71,5 @@ gem "loofah", ">= 2.3.1"
 gem 'faker'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'omniauth'
+gem 'omniauth-twitter'

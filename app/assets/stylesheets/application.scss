@@ -133,15 +133,17 @@ body {
 }  
 
 .room-list {
-    span {
-        font-size: 30px;
-        margin-right: 50px;
+    padding-left: 15%;
+
+    h2 {
+        margin: 20px;
     }
+    
 }
 
 // rooms show
 .chat-room-whole  {
-    background-color: #F8F8FF;
+    background-color: #F5F5DC;
   .chat-room {
 
    .room-header {
