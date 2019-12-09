@@ -1,9 +1,10 @@
 class RoomsController < ApplicationController
   # before_action :authenticate_user!
+  PER = 15
 
   def index   
     @user = current_user.id
-    @rooms = Room.all.order(:id)
+    @rooms = Room.all.page(params[:page]).per(PER).order(:id)
   end
 
   def show
@@ -15,7 +16,7 @@ class RoomsController < ApplicationController
   def new
     if Room.create!
       redirect_to rooms_path
-      flash[:notice] = "新規ルームを作成しました。"
+      flash[:notice] = "新規ルーム#{@rooms}を作成しました。"
     end
     
   end

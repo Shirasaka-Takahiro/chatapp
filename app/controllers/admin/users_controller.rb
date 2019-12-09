@@ -1,5 +1,6 @@
 class Admin::UsersController < ApplicationController
   before_action :admin_user
+  PER = 20
 
   def new
     @user = User.new
@@ -24,7 +25,7 @@ class Admin::UsersController < ApplicationController
   end
 
   def index
-    @user = User.where.not(id: current_user.id)
+    @user = User.where.not(id: current_user.id).page(params[:page]).per(PER)
   end
 
   private
