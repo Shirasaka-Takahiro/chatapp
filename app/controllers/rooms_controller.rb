@@ -1,18 +1,10 @@
 class RoomsController < ApplicationController
-<<<<<<< HEAD
-  # before_action :authenticate_user!
-=======
   before_action :authenticate_user!
->>>>>>> test
   PER = 15
 
   def index   
     @user = current_user.id
-<<<<<<< HEAD
-    @rooms = Room.all.page(params[:page]).per(PER).order(:id)
-=======
     @rooms = Room.all.order(:id).page(params[:page]).per(PER)
->>>>>>> test
   end
 
   def show
