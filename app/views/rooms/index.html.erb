@@ -22,6 +22,7 @@
         <% end %>
       </ul>
      </div>
+    <%= paginate @rooms %>
     <p><%= link_to "新規ルームを作成する", new_room_path(@rooms), class: 'btn' %></p>
   </div>
 
