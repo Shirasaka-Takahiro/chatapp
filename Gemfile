@@ -74,9 +74,5 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'omniauth'
 gem 'omniauth-twitter'
-<<<<<<< HEAD
 gem 'kaminari'
 gem 'kaminari-bootstrap'
-=======
-gem 'kaminari'
->>>>>>> test
