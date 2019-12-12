@@ -139,12 +139,9 @@ GEM
     kaminari-activerecord (1.1.1)
       activerecord
       kaminari-core (= 1.1.1)
-<<<<<<< HEAD
     kaminari-bootstrap (3.0.1)
       kaminari (>= 0.13.0)
       rails
-=======
->>>>>>> test
     kaminari-core (1.1.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -321,10 +318,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   kaminari
-<<<<<<< HEAD
   kaminari-bootstrap
-=======
->>>>>>> test
   listen (>= 3.0.5, < 3.2)
   loofah (>= 2.3.1)
   omniauth
